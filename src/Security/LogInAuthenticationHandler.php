@@ -75,7 +75,7 @@ class LogInAuthenticationHandler implements AuthenticationHandler
      * @param HTTPRequest|null $request
      * @throws InvalidArgumentException
      */
-    public function logIn(Member $member, $persistent = false, HTTPRequest $request = null)
+    public function logIn(Member $member, $persistent = false, ?HTTPRequest $request = null)
     {
         // Fall back to retrieving request from current Controller if available
         if ($request === null) {
@@ -108,7 +108,7 @@ class LogInAuthenticationHandler implements AuthenticationHandler
     /**
      * @param HTTPRequest $request|null
      */
-    public function logOut(HTTPRequest $request = null)
+    public function logOut(?HTTPRequest $request = null)
     {
         // noop
     }
